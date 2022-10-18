@@ -39,8 +39,23 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
-	
-	
+
+	public Usuario(Long id, @NotBlank(message = "O atributo email é obrigatório") String nome,
+			@NotBlank(message = "O atributo email é obrigatório") @Email(message = "O email deve ser válido") String usuario,
+			@NotBlank(message = "O atributo senha é obrigatório") @Size(message = "min = 8, max = 12") String senha,
+			String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+
+	public Usuario() {
+		super();
+	}
+
+
 
 	public Long getId() {
 		return id;
