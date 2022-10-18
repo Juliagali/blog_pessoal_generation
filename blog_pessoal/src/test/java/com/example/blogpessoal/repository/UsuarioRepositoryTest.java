@@ -32,6 +32,7 @@ public class UsuarioRepositoryTest {
 	usuarioRepository.save(new Usuario(0L, "Adriana da Silva","dri@hotmail.com.br", "https://i.imgur.com/5M2p5Wb.jpg",  "12345678"));
 	usuarioRepository.save(new Usuario(0L, "Paulo Antunes", "paulo@hotmail.com.br", "https://i.imgur.com/FETvs20.jpg",  "12345678"));
 	
+	
 	}
 	
 	@Test
